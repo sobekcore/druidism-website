@@ -1,8 +1,10 @@
 export default function PostTitle({ children })
 {
   return(
-    <h1>
+    <h2>
+    <a className="post-title">
       {children}
-    </h1>
+    </a>
+    </h2>
   );
 }

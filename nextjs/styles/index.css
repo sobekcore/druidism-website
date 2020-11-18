@@ -1,0 +1,149 @@
+/* Website */
+body
+{
+  padding: 0px;
+  margin: 0px 0px 8px 0px;
+}
+
+.navbar
+{
+  font: 28px "Spectral", sans-serif;
+  background-color: black;
+  max-width: 100vw;
+  padding-left: 25px;
+  margin-bottom: 8px;
+
+  /* Centering navbar*/
+  height: 50px;
+  line-height: 50px;
+}
+
+.nav-single
+{
+  color: white;
+  text-decoration: none;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+.nav-single:hover
+{
+  color: darkgray;
+}
+
+.author-name
+{
+  font: 21px "Spectral", sans-serif;
+  margin-left: 5px;
+}
+
+
+/* Home page */
+.main-title
+{
+  font: bold 80px "Spectral", sans-serif;
+  text-align: center;
+  margin-top: 40vh;
+}
+
+
+/* Blog page */
+.post
+{
+  margin: 5px 8px 0px 8px;
+  padding: 0px 15px 5px 15px;
+  background-color: lightgrey;
+  border: solid;
+}
+
+.post-title, .post-preview-title
+{
+  font: bold 30px "Spectral", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.post-preview-title:hover
+{
+  color: darkgray;
+}
+
+.post-date
+{
+  font: 20px "Spectral", sans-serif;
+  margin: 0px 0px -22px 95px;
+}
+
+.post-body
+{
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+figure
+{
+  /* Images in posts */
+  text-align: center;
+  margin: 23px;
+}
+
+
+/* Comments */
+#comments-title
+{
+  font: bold 24px "Helvetica Neue", sans-serif;
+}
+
+#comment-box
+{
+  margin: 0px 20px 7px -30px;
+  font: 15px "Helvetica Neue", sans-serif;
+  border: 1px solid black;
+  padding: 0px 30px 5px 30px;
+}
+
+#comment-name
+{
+  text-decoration: none;
+  color: black;
+}
+
+.comment-submitting
+{
+  font: bold 17px "Helvetica Neue", sans-serif;
+}
+
+
+/* Comment form */
+#form
+{
+  margin: 30px 0px 20px 0px;
+}
+
+#form-name, #form-email, #form-comment
+{
+  font: bold 15px "Helvetica Neue", sans-serif;
+  margin: 0px 0px 0px 15px;
+}
+
+#form-comment
+{
+  margin-top: -140px;
+  margin-left: 214px;
+  min-height: 135px;
+}
+
+textarea
+{
+  width: 300px;
+  height: 128px;
+  max-width: calc(100vw - 313px);
+  max-height: 600px;
+}
+
+#form-submit
+{
+  font: 15px "Helvetica Neue", sans-serif;
+  margin: 5px 0px 0px 39px;
+}

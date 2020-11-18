@@ -11,17 +11,17 @@ export default function PostPreview({
 })
 {
   return(
-    <div>
-      <h3>
+    <div class="post">
+      <h2>
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
-          <a>{title}</a>
+          <a className="post-preview-title">{title}</a>
         </Link>
-      </h3>
-      <div>
+      </h2>
+      <div className="post-date">
         <Date dateString={date} />
       </div>
       <Avatar name={author.name} picture={author.picture} />
-      <p>
+      <p className="post-body">
         {excerpt}
       </p>
     </div>

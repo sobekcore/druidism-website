@@ -4,7 +4,7 @@ import client from "../lib/sanity";
 export default function PostBody({ content })
 {
   return(
-    <div>
+    <div className="post-body">
       <BlockContent
         blocks={ content }
         imageOptions={{ fit: "max" }}

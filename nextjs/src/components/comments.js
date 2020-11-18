@@ -5,16 +5,14 @@ export function Comments({ comments = [] })
 {
   return(
     <Fragment>
-      <h2>Comments:</h2>
+      <h2 id="comments-title">Comments:</h2>
       <ul>
         {comments?.map(({ _id, _createdAt, name, email, comment }) => (
-          <li key={_id}>
-            <hr/>
-            <h4><a href={`mailto:${email}`}>{name}</a> (<Date
+          <div id="comment-box" key={_id}>
+            <h4><a id="comment-name">{name}</a> - (<Date
             dateString={_createdAt}/>)</h4>
             <p>{comment}</p>
-            <hr/>
-          </li>
+          </div>
         ))}
       </ul>
     </Fragment>

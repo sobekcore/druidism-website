@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
-import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import { Form } from "../../components/form";
 import { Comments } from "../../components/comments";
+import NavBar from "../../components/navbar";
 
 export default function Post({ post })
 {
@@ -18,23 +18,25 @@ export default function Post({ post })
 
   return(
     <div>
-      <Header />
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <>
-          <article>
-            <PostHeader
-                title={post.title}
-                date={post.date}
-                author={post.author}
-              />
-            <PostBody content={post.body} />
-          </article>
-          <Comments comments={post.comments} />
-          <Form _id={post._id} />
-        </>
-      )}
+      <NavBar />
+      <div className="post">
+        {router.isFallback ? (
+          <PostTitle>Loading…</PostTitle>
+        ) : (
+          <>
+            <article>
+              <PostHeader
+                  title={post.title}
+                  date={post.date}
+                  author={post.author}
+                />
+              <PostBody content={post.body} />
+            </article>
+            <Comments comments={post.comments} />
+            <Form _id={post._id} />
+          </>
+        )}
+      </div>
     </div>
   );
 }
