@@ -38,4 +38,4 @@ If you want to use this project to test something or look up how it works you mu
   * Comment
   * Post
 
-Have fun testing :simple_smile:
+Have fun testing :smile:
