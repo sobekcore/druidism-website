@@ -12,6 +12,7 @@ export default function PostAll({ posts })
             date={post.date}
             excerpt={post.excerpt}
             author={post.author}
+            categories={post.categories}
             slug={post.slug}
           />
         ))}

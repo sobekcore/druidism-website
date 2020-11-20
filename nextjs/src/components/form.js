@@ -60,7 +60,9 @@ export function Form ({ _id })
             <input name="email" type="email" ref={register({required: true})} placeholder="your@email.com"/>
           </div>
         </label> <br />
-        <input id="form-submit" value="Submit" type="submit"/> your post.
+        <div id="form-submit">
+          <input value="Submit" type="submit"/> your comment.
+        </div>
         <label>
           <div id="form-comment">
             <span>Comment</span> <br />

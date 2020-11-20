@@ -5,7 +5,7 @@ export default function Index()
   return(
     <div>
       <NavBar />
-      <p className="main-title">Druidism</p>
+      <p id="main-title">Druidism</p>
     </div>
   );
 }

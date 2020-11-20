@@ -29,7 +29,8 @@ export default function Post({ post })
                   title={post.title}
                   date={post.date}
                   author={post.author}
-                />
+                  categories={post.categories}
+              />
               <PostBody content={post.body} />
             </article>
             <Comments comments={post.comments} />

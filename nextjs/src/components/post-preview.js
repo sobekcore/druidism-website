@@ -1,26 +1,27 @@
-import Avatar from "./avatar";
-import Date from "./date";
+import Published from "./published";
 import Link from "next/link";
+import PostCategories from "./post-categories";
 
 export default function PostPreview({
   title,
   date,
   excerpt,
   author,
+  categories,
   slug,
 })
 {
   return(
-    <div class="post">
+    <div className="post">
       <h2>
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
-          <a className="post-preview-title">{title}</a>
+          <a id="post-preview-title">{title}</a>
         </Link>
       </h2>
-      <div className="post-date">
-        <Date dateString={date} />
+      <div className="published">
+        <Published name={author.name} picture={author.picture} dateString={date} />
       </div>
-      <Avatar name={author.name} picture={author.picture} />
+      <PostCategories categoryList={categories}/>
       <p className="post-body">
         {excerpt}
       </p>

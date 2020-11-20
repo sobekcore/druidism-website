@@ -1,19 +1,17 @@
-import Avatar from "../components/avatar";
-import Date from "../components/date";
+import Published from "../components/published";
 import PostTitle from "../components/post-title";
+import PostCategories from "../components/post-categories";
 
-export default function PostHeader({ title, date, author })
+export default function PostHeader({ title, date, author, categories })
 {
   return(
     <>
       <PostTitle>{title}</PostTitle>
       <div>
-        <div className="post-date">
-          <Date dateString={date} />
+        <div className="published">
+          <Published name={author.name} picture={author.picture} dateString={date} />
         </div>
-        <div className="post-author">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
+        <PostCategories categoryList={categories}/>
       </div>
     </>
   );

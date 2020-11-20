@@ -26,6 +26,7 @@ const postFields =
   "date": publishedAt,
   excerpt,
   "author": author->{name, "picture": image.asset->url},
+  "categories": categories[]->title,
   "slug": slug.current,
 `
 
