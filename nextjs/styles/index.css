@@ -2,58 +2,343 @@
 body
 {
   padding: 0px;
-  margin: 0px 0px 8px 0px;
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-anchor: none;
+
+  --navbar-margin: 60px;
+  --purple-main-color: #613D96;
+  --purple-dark-color: #401D66;
+  --light-pink-color: #D6C5F8;
 }
 
+body::-webkit-scrollbar
+{
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track
+{
+  background: var(--light-pink-color);
+}
+
+body::-webkit-scrollbar-thumb
+{
+  background: var(--purple-dark-color);
+}
+
+
+/* Navbar */
 .navbar
 {
-  font: 28px "Neuville", sans-serif;
-  background-color: black;
-  max-width: 100vw;
-  padding-left: 25px;
-  margin-bottom: 8px;
-
-  /* Centering navbar*/
-  height: 50px;
-  line-height: 50px;
+  font: 26px "Montserrat", sans-serif;
+  background: rgba(97, 61, 150, 0.8);
+  text-transform: uppercase;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  line-height: 60px;
+  height: 60px;
 }
 
-.nav-single
+.navbar ul
 {
-  color: white;
+  list-style: none;
+  margin: 0px;
+}
+
+.navbar ul li
+{
+  display: inline-block;
+}
+
+.navbar a
+{
+  color: var(--light-pink-color);
   text-decoration: none;
-  padding: 0px 20px 0px 20px;
+  padding: 15px 25px 15px 25px;
   text-align: center;
 }
 
-.nav-single:hover
+.navbar ul li a,
+.navbar ul li a:after,
+.navbar ul li a:before
 {
-  color: darkgray;
+  transition: all .5s;
 }
+
+.navbar ul li a:hover
+{
+  color: white;
+}
+
+.navbar ul li a.active
+{
+  color: white;
+  text-shadow: black 1px 0 13px;
+  background:
+    linear-gradient(to top, transparent 85%, var(--purple-dark-color) 0) top/100% no-repeat;
+}
+
+#navbar-icons .icons-box
+{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 90px 0 0;
+  padding-bottom: 62px;
+}
+
+#navbar-icons .icons-box a
+{
+  padding: 0;
+  height: 40px;
+  width: 40px;
+}
+
+
+/* Navbar shift */
+.shift ul li a
+{
+  position: relative;
+  z-index: 1;
+}
+
+.shift ul li a:hover::before
+{
+  color: white;
+}
+
+.shift ul li a:after
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  background: rgba(72, 44, 112, 0.8);
+  border-radius: 3px;
+  z-index: -1;
+
+  /* Animation vars */
+  visibility: none;
+  opacity: 0;
+  height: 1px;
+
+  /* Font disapper */
+  content: '`';
+  color: transparent;
+  font-size: 1px;
+}
+
+.shift ul li a:hover:after
+{
+  opacity: 1;
+  visibility: visible;
+  height: 60px;
+}
+
 
 /* Home page */
 #main-title
 {
-  font: bold 80px "Neuville", sans-serif;
+  margin-top: calc(36vh + var(--navbar-margin));
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#background1, #background2, #background3, #background4, #background5
+{
+  height: 100vh;
+  image-rendering: pixelated;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+}
+
+#background5
+{
+  height: 100vh;
+  padding-top: 35vh;
+  z-index: 1;
+  background: bottom center repeat-x url(../public/home-background/first-layer.png);
+  background-size: cover;
+}
+
+#title-page
+{
+  position: relative;
+  height: calc(100vh + 35vh);
+}
+
+#trailer-video
+{
+  position: relative;
+  width: 100vw;
+  height: 750px;
+  background: var(--purple-main-color);
+  z-index: 0;
+}
+
+#trailer-video img
+{
+  position: absolute;
+  width: 1060px;
+  height: 597px;
+  margin-top: 375px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+
+}
+
+#section-waves
+{
+  position: relative;
+  width: 100vw;
+}
+
+#section-waves-box
+{
+  position: relative;
+  width: 100vw;
+  background: var(--light-pink-color);
+}
+
+#features-box
+{
+  position: relative;
+  display: inline-flex;
+  margin: 380px 0 -100px 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.features
+{
+  position: relative;
+  padding: 0 40px 0 40px;
+  width: 330px;
+}
+
+.features .features-title
+{
+  padding-bottom: 20px;
+  font: 36px "Montserrat", sans-serif;
   text-align: center;
-  margin-top: 40vh;
-  text-shadow: 3px 2px 0 darkgray;
-  -webkit-text-stroke: 2px darkgray;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.features img
+{
+  width: 100%;
+  height: auto;
+}
+
+.features span
+{
+  display: flex;
+  padding-top: 20px;
+  text-align: justify;
+  font: 20px/1.4 "Open Sans", sans-serif;
+}
+
+#footer
+{
+  position: relative;
+  font: 18px "Montserrat", sans-serif;
+  background: var(--purple-main-color);
+  color: var(--light-pink-color);
+  height: 170px;
+  width: 100vw;
+}
+
+#footer #created-by
+{
+  padding: 25px;
+  text-align: center;
+}
+
+#footer #created-by a
+{
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+}
+
+#footer hr
+{
+  border-color: var(--light-pink-color);
+  margin: auto;
+  width: 300px;
+}
+
+.icons-box
+{
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-top: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icons-box .icon
+{
+  width: 40px;
+  margin: 0 10px 0 10px;
+  filter: invert(90%) brightness(0.7) sepia(0.6) hue-rotate(-150deg) saturate(5);
+}
+
+.icons-box ul
+{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.icons-box ul li
+{
+  display: inline;
+}
+
+.icons-box ul li a,
+.icons-box ul li a::after,
+.icons-box ul li a::before
+{
+  transition: all .5s;
+}
+
+.icons-box ul li a:hover
+{
+  filter: brightness(2) drop-shadow(0 0 0.75rem black);
 }
 
 
 /* Blog page */
-.post
+.post, .post-preview
 {
-  margin: 5px 8px 0px 8px;
+  margin: 0 8px 8px 8px;
   padding: 0px 15px 5px 15px;
   background-color: lightgray;
   border: solid;
 }
 
+.post, .post-preview:first-child
+{
+  margin-top: calc(var(--navbar-margin) + 8px);
+}
+
 #post-title, #post-preview-title
 {
-  font: bold 30px "Neuville", sans-serif;
+  font: bold 28px "Montserrat", sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -65,13 +350,13 @@ body
 
 .published
 {
-  font: 20px "Neuville", sans-serif;
+  font: 19px "Montserrat", sans-serif;
   margin-left: 95px;
 }
 
 #author-name
 {
-  font: bold 22px "Neuville", sans-serif;
+  font: bold 19px "Montserrat", sans-serif;
 }
 
 #author-image
@@ -106,7 +391,7 @@ figure
 #categories
 {
   display: inline;
-  font: 15px "Helvetica Neue", sans-serif;
+  font: 16px "Montserrat", sans-serif;
 }
 
 #category-single
@@ -122,7 +407,7 @@ figure
 /* Comments */
 #comments-title
 {
-  font: bold 24px "Helvetica Neue", sans-serif;
+  font: bold 24px "Montserrat", sans-serif;
 }
 
 #comment-box

@@ -12,7 +12,7 @@ export default function PostPreview({
 })
 {
   return(
-    <div className="post">
+    <div className="post-preview">
       <h2>
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
           <a id="post-preview-title">{title}</a>
