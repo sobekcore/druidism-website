@@ -7,6 +7,8 @@ import PostTitle from "../../components/post-title";
 import { Form } from "../../components/form";
 import { Comments } from "../../components/comments";
 import NavBar from "../../components/navbar";
+import Title from "../../components/title";
+import Footer from "../../components/footer";
 
 export default function Post({ post })
 {
@@ -17,26 +19,30 @@ export default function Post({ post })
   }
 
   return(
-    <div>
-      <NavBar />
-      <div className="post">
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <PostHeader
-                  title={post.title}
-                  date={post.date}
-                  author={post.author}
-                  categories={post.categories}
-              />
-              <PostBody content={post.body} />
-            </article>
-            <Comments comments={post.comments} />
-            <Form _id={post._id} />
-          </>
-        )}
+    <div id="post-page">
+      <div className="background">
+        <Title />
+        <NavBar />
+        <div className="post">
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article>
+                <PostHeader
+                    title={post.title}
+                    date={post.date}
+                    author={post.author}
+                    categories={post.categories}
+                />
+                <PostBody content={post.body} />
+              </article>
+              <Comments comments={post.comments} />
+              <Form _id={post._id} />
+            </>
+          )}
+        </div>
+        <Footer />
       </div>
     </div>
   );

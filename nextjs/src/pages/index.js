@@ -1,5 +1,7 @@
 import NavBar from "../components/navbar";
 import { useState, useEffect } from "react";
+import Title from "../components/title";
+import Footer from "../components/footer";
 
 export default function Index()
 {
@@ -43,9 +45,7 @@ export default function Index()
           <div id="background5"></div>
         </div>
         <NavBar />
-        <div id="main-title">
-          <img src="main-logo.png"/>
-        </div>
+        <Title />
       </div>
       <div id="trailer-video">
         <img src=""/>
@@ -76,17 +76,7 @@ export default function Index()
           </div>
         </div>
       </div>
-      <div id="footer">
-        <div id="created-by">Druidism | Created by <a href="https://twitter.com/sobekcore">Sobek</a></div>
-        <hr />
-        <div className="icons-box">
-          <ul>
-            <li><a href="https://twitter.com/sobekcore"><img className="icon" src="twitter-icon.svg"/></a></li>
-            <li><a><img className="icon" src="email-icon.svg"/></a></li>
-            <li><a href="https://github.com/sobekcore"><img className="icon" src="github-icon.svg"/></a></li>
-          </ul>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

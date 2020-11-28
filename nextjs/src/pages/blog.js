@@ -1,22 +1,18 @@
-import PostAll from "../components/post-all";
-import { getAllPostsForHome } from "../lib/api";
+import PostPagination from "../components/post-pagination";
 import NavBar from "../components/navbar";
+import Title from "../components/title"
+import Footer from "../components/footer";
 
-export default function Index({ everyPost })
+export default function Blog()
 {
-  const allPosts = everyPost.slice(0)
-  return(
-    <>
-      <NavBar />
-      {allPosts.length > 0 && <PostAll posts={allPosts} />}
-    </>
+  return (
+    <div id="blog-page">
+      <div className="background">
+        <NavBar />
+        <Title />
+        <PostPagination />
+        <Footer />
+      </div>
+    </div>
   );
-}
-
-export async function getStaticProps({ preview = false })
-{
-  const everyPost = await getAllPostsForHome(preview);
-  return{
-    props: { everyPost, preview },
-  };
-}
+};

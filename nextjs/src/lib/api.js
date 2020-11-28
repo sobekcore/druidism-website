@@ -1,6 +1,6 @@
 import client, { previewClient } from "./sanity";
 
-const getUniquePosts = (posts) =>
+export const getUniquePosts = (posts) =>
 {
   const slugs = new Set();
   return posts.filter((post) =>
@@ -18,7 +18,7 @@ const getUniquePosts = (posts) =>
   );
 }
 
-const postFields =
+export const postFields =
 `
   _id,
   name,
@@ -70,12 +70,44 @@ export async function getPostAndMorePosts(slug, preview)
       )
       .then((res) => res?.[0]),
     curClient.fetch(
-      `*[_type == "post" && slug.current != $slug] | order(_updatedAt asc, publishedAt desc)
+      `*[_type == "post" && slug.current != $slug] | order(publishedAt desc)
       {
         ${postFields}
         body,
       }[0...2]`,
       { slug }
+    ),
+  ]);
+  return { post, morePosts: getUniquePosts(morePosts) };
+}
+
+export async function getXAmountOfPosts(preview, firstPostID, lastPostID)
+{
+  const curClient = getClient(preview);
+  const [post, morePosts] = await Promise.all([
+    curClient
+      .fetch(
+        `*[_type == "post"] | order(publishedAt desc)
+        {
+          ${postFields}
+          body,
+          'comments': *[_type == "comment" && references(^._id) && approved == true]
+          {
+            _id,
+            name,
+            email,
+            comment,
+            _createdAt
+          }
+        }`
+      )
+      .then((res) => res?.[0]),
+    curClient.fetch(
+      `*[_type == "post"] | order(publishedAt desc)
+      {
+        ${postFields}
+        body,
+      }[${firstPostID}...${lastPostID}]`
     ),
   ]);
   return { post, morePosts: getUniquePosts(morePosts) };

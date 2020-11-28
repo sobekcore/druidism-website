@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import SocialIcons from "./social-icons";
 
 export default function NavBar()
 {
@@ -8,8 +9,8 @@ export default function NavBar()
   const blogClass = (router.pathname == "/blog" || router.pathname == "/blog/[slug]") ? "active" : "";
 
   return(
-    <nav className="navbar">
-      <div className="shift">
+    <nav id="navbar">
+      <div id="shift">
         <ul>
           <li><Link href="/">
             <a className={mainClass}>Main</a>
@@ -20,13 +21,7 @@ export default function NavBar()
         </ul>
       </div>
       <div id="navbar-icons">
-        <div class="icons-box">
-          <ul>
-            <li><a href="https://twitter.com/sobekcore"><img className="icon" src="twitter-icon.svg"/></a></li>
-            <li><a><img className="icon" src="email-icon.svg"/></a></li>
-            <li><a href="https://github.com/sobekcore"><img className="icon" src="github-icon.svg"/></a></li>
-          </ul>
-        </div>
+        <SocialIcons />
       </div>
     </nav>
   );

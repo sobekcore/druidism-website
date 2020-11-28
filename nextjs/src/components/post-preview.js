@@ -15,16 +15,23 @@ export default function PostPreview({
     <div className="post-preview">
       <h2>
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
-          <a id="post-preview-title">{title}</a>
+          <a>{title}</a>
         </Link>
       </h2>
       <div className="published">
         <Published name={author.name} picture={author.picture} dateString={date} />
       </div>
       <PostCategories categoryList={categories}/>
-      <p className="post-body">
+      <div className="post-body">
+        <p>Hello everyone,</p>
         {excerpt}
-      </p>
+      </div>
+      <div id="show-more">
+        <div id="show-more-trans"></div>
+        <Link as={`/blog/${slug}`} href="/blog/[slug]">
+          <a>Show more...</a>
+        </Link>
+      </div>
     </div>
   );
 }
