@@ -21,8 +21,8 @@ export default function PostPagination()
           ${postFields}
           body,
         }`)
-      .then(res => {
-        postsToSend.push(...res);
+      .then(data => {
+        postsToSend.push(...data);
         router.push("/blog");
       });
   }, []);
@@ -34,6 +34,7 @@ export default function PostPagination()
   const action = (page, range, posts) =>
   {
     setPosts(posts);
+    // console.clear();
   };
 
   return(

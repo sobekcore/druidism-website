@@ -37,8 +37,8 @@ export default function Post({ post })
                 />
                 <PostBody content={post.body} />
               </article>
-              <Comments comments={post.comments} />
               <Form _id={post._id} />
+              <Comments comments={post.comments} />
             </>
           )}
         </div>

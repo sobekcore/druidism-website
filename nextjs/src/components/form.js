@@ -47,28 +47,28 @@ export function Form ({ _id })
 
   return(
     <form id="form" onSubmit={handleSubmit(onSubmit)} disabled>
+      <h2 id="comments-title">Comments:</h2>
       <input ref={register} type="hidden" name="_id" value={_id}/>
         <label>
-          <div id="form-name">
-            <span>Name</span> <br />
-            <input name="name" ref={register({required: true})} placeholder="Your Name"/>
-          </div>
-        </label> <br />
-        <label>
-          <div id="form-email">
-            <span>Email</span> <br />
-            <input name="email" type="email" ref={register({required: true})} placeholder="your@email.com"/>
-          </div>
-        </label> <br />
-        <div id="form-submit">
-          <input value="Submit" type="submit"/> your comment.
-        </div>
-        <label>
           <div id="form-comment">
-            <span>Comment</span> <br />
-            <textarea ref={register({required: true})} name="comment" rows="8" placeholder="Place for your comment."></textarea>
+            <textarea ref={register({required: true})} name="comment" rows="8" placeholder="Comment..."></textarea>
           </div>
         </label>
+        <div id="form-second-row">
+          <label>
+            <div id="form-name">
+              <input name="name" ref={register({required: true})} placeholder="Name"/>
+            </div>
+          </label> <br />
+          <label>
+            <div id="form-email">
+              <input name="email" type="email" ref={register({required: true})} placeholder="your@email.com"/>
+            </div>
+          </label> <br />
+          <div id="form-submit">
+            <input value="Submit" type="submit"/>
+          </div>
+        </div>
       {/* errors will return when field validation fails */}
       {errors.exampleRequired && <span>This field is required</span>}
     </form>

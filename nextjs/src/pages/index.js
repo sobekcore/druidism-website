@@ -48,7 +48,7 @@ export default function Index()
         <Title />
       </div>
       <div id="trailer-video">
-        <img src=""/>
+        <img src="video.png"/>
       </div>
       <div id="section-waves-box">
         <img id="section-waves" src="section-waves.svg"/>
