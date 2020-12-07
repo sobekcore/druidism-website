@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 export function Form ({ _id })
 {
-  const [setFormData] = useState();
+  const [formData, setFormData] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const { register, handleSubmit, errors } = useForm();
@@ -30,24 +30,30 @@ export function Form ({ _id })
     }
   }
 
-  if (isSubmitting)
-  {
-    return <h3 className="comment-submitting">Submitting comment…</h3>
-  }
-
-  if (hasSubmitted)
+  if(isSubmitting)
   {
     return(
-      <>
+      <div className="submition-box">
+        <h2 className="comments-title">Comments:</h2>
+        <h3 className="comment-submitting">Submitting comment…</h3>
+      </div>
+    );
+  }
+
+  if(hasSubmitted)
+  {
+    return(
+      <div className="submition-box">
+        <h2 className="comments-title">Comments:</h2>
         <h3 className="comment-submitting">Thanks for your comment!<br />
         It might take some time for post to show up...</h3>
-      </>
+      </div>
     );
   }
 
   return(
     <form id="form" onSubmit={handleSubmit(onSubmit)} disabled>
-      <h2 id="comments-title">Comments:</h2>
+      <h2 className="comments-title">Comments:</h2>
       <input ref={register} type="hidden" name="_id" value={_id}/>
         <label>
           <div id="form-comment">

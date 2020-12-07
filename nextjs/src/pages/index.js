@@ -1,49 +1,14 @@
 import NavBar from "../components/navbar";
-import { useState, useEffect } from "react";
+import ParallaxScrolling from "../components/parallax-scrolling";
 import Title from "../components/title";
 import Footer from "../components/footer";
 
 export default function Index()
 {
-  const [scroll, setScroll] = useState(0);
-
-  useEffect(() =>
-  {
-    document.addEventListener("scroll", () =>
-    {
-      const scrollCheck = window.scrollY;
-
-      if(scroll <= 800)
-      {
-        if(scrollCheck !== scroll)
-        {
-          setScroll(scrollCheck)
-        }
-      }
-    });
-  });
-
   return(
     <div>
       <div id="title-page">
-        <div>
-          <div id="background1-box">
-            <img id="background1" src="home-background/sky.png"/>
-          </div>
-          <div id="background2-box">
-            <img style={scroll ? {'paddingTop': `${scrollY / 2}px`} : {'paddingTop': 'none'}}
-            id="background2" src="home-background/mountains.png"/>
-          </div>
-          <div id="background3-box">
-            <img style={scroll ? {'paddingTop': `${scrollY / 2.8}px`} : {'paddingTop': 'none'}}
-            id="background3" src="home-background/third-layer.png"/>
-          </div>
-          <div id="background4-box">
-            <img style={scroll ? {'paddingTop': `${scrollY / 5}px`} : {'paddingTop': 'none'}}
-            id="background4" src="home-background/second-layer.png"/>
-          </div>
-          <div id="background5"></div>
-        </div>
+        <ParallaxScrolling />
         <NavBar />
         <Title />
       </div>

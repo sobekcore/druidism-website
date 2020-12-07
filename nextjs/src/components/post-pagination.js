@@ -34,31 +34,43 @@ export default function PostPagination()
   const action = (page, range, posts) =>
   {
     setPosts(posts);
-    // console.clear();
   };
 
-  return(
-    <div>
-      {posts.map((post) => {
-        return(
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            date={post.date}
-            excerpt={post.excerpt}
-            author={post.author}
-            categories={post.categories}
-            slug={post.slug}
+  if(postsToSend.length >= 1)
+  {
+    return(
+      <div>
+        {posts.map((post) => {
+          return(
+            <PostPreview
+              key={post.slug}
+              title={post.title}
+              date={post.date}
+              excerpt={post.excerpt}
+              author={post.author}
+              categories={post.categories}
+              slug={post.slug}
+            />
+          );
+        })}
+        <div id="pagination">
+          <Pagination
+            items={getUniquePosts(postsToSend)}
+            action={action}
+            postsPerPage={postsPerPage}
           />
-        );
-      })}
-      <div id="pagination">
-        <Pagination
-          items={getUniquePosts(postsToSend)}
-          action={action}
-          postsPerPage={postsPerPage}
-        />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  else
+  {
+    return(
+      <div className="post">
+        <div id="loading">
+          Loading...
+        </div>
+      </div>
+    );
+  }
 }
