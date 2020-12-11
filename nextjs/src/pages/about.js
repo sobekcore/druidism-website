@@ -11,7 +11,7 @@ export default function About()
         <Title />
         <div className="post">
           <span id="about-header">
-            Druidism is a story-based rpg game. Its made with pixel art with love by a single person.
+            Druidism is a story-based rpg game.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem turpis, viverra id varius in,
             porttitor id lectus. Nullam maximus porta odio, ac elementum lacus pulvinar at. Donec eu libero odio.
             Vestibulum quis leo vulputate, sagittis nisl vitae, vehicula neque. Cras luctus porttitor laoreet.
