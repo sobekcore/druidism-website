@@ -6,7 +6,6 @@ export default function NavbarItems()
   const router = useRouter();
   const mainClass = router.pathname == "/" ? "active" : "";
   const blogClass = (router.pathname == "/blog" || router.pathname == "/blog/[slug]") ? "active" : "";
-  const aboutClass = router.pathname == "/about" ? "active" : "";
   const galleryClass = router.pathname == "/gallery" ? "active" : "";
   const faqClass = router.pathname == "/faq" ? "active" : "";
   const mediaClass = router.pathname == "/media" ? "active" : "";
@@ -18,9 +17,6 @@ export default function NavbarItems()
     </Link></li>
     <li><Link href="/blog">
       <a className={blogClass}>Blog</a>
-    </Link></li>
-    <li><Link href="/about">
-      <a className={aboutClass}>About</a>
     </Link></li>
     <li><Link href="/gallery">
       <a className={galleryClass}>Gallery</a>

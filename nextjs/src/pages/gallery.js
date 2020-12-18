@@ -27,7 +27,7 @@ export default function Gallery()
         <Navbar />
         <Title />
         <div className="post">
-          <div className="gallery-title">Screenshots</div>
+          <div className="gallery-title">Images</div>
           <ImageGallery
             items={images}
             showPlayButton={false}
