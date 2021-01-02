@@ -38,22 +38,13 @@ export async function getAllPostsWithSlug()
   return data;
 }
 
-export async function getAllPostsForHome(preview)
+export async function getBlogPost(slug)
 {
-  const results = await getClient(preview)
-    .fetch(`*[_type == "post"] | order(date desc, publishedAt desc){
-      ${postFields}
-    }`);
-  return getUniquePosts(results);
-}
-
-export async function getPostAndMorePosts(slug, preview)
-{
-  const curClient = getClient(preview);
-  const [post, morePosts] = await Promise.all([
+  const curClient = getClient();
+  const [post] = await Promise.all([
     curClient
       .fetch(
-        `*[_type == "post" && slug.current == $slug] | order(publishedAt desc)
+        `*[_type == "post" && slug.current == $slug]
         {
           ${postFields}
           body,
@@ -68,47 +59,7 @@ export async function getPostAndMorePosts(slug, preview)
         }`,
         { slug }
       )
-      .then((res) => res?.[0]),
-    curClient.fetch(
-      `*[_type == "post" && slug.current != $slug] | order(publishedAt desc)
-      {
-        ${postFields}
-        body,
-      }[0...2]`,
-      { slug }
-    ),
+    .then((res) => res?.[0])
   ]);
-  return { post, morePosts: getUniquePosts(morePosts) };
-}
-
-export async function getXAmountOfPosts(preview, firstPostID, lastPostID)
-{
-  const curClient = getClient(preview);
-  const [post, morePosts] = await Promise.all([
-    curClient
-      .fetch(
-        `*[_type == "post"] | order(publishedAt desc)
-        {
-          ${postFields}
-          body,
-          'comments': *[_type == "comment" && references(^._id) && approved == true] | order(_createdAt desc)
-          {
-            _id,
-            name,
-            email,
-            comment,
-            _createdAt
-          }
-        }`
-      )
-      .then((res) => res?.[0]),
-    curClient.fetch(
-      `*[_type == "post"] | order(publishedAt desc)
-      {
-        ${postFields}
-        body,
-      }[${firstPostID}...${lastPostID}]`
-    ),
-  ]);
-  return { post, morePosts: getUniquePosts(morePosts) };
+  return { post };
 }

@@ -54,7 +54,6 @@ export default function PressContent()
       <div id="press-more-content">
         <div id="videos"></div>
         <h1>Videos</h1>
-          {/*<div id="press-big-image"><img src=""/></div>*/}
           <h3>Soon™</h3>
 
         <hr />
@@ -82,7 +81,7 @@ export default function PressContent()
         </a>
         <div id="press-logo-box">
           <div id="press-icon">
-            <a href="/big-icon.png"><img src="/big-icon.png"/></a>
+            <a href="/icon.png"><img src="/icon.png"/></a>
           </div>
           <div id="press-logo">
             <a href="/main-logo.png"><img src="/main-logo.png"/></a>

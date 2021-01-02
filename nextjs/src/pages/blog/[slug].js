@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
+import { getAllPostsWithSlug, getBlogPost } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import { Form } from "../../components/form";
 import { Comments } from "../../components/comments";
@@ -48,17 +48,13 @@ export default function Post({ post })
   );
 }
 
-export async function getStaticProps({ params, preview = false })
+export async function getStaticProps({ params })
 {
-  const data = await getPostAndMorePosts(params.slug, preview);
+  const data = await getBlogPost(params.slug);
 
   return{
     props:
-    {
-      preview,
-      post: data?.post || null,
-      morePosts: data?.morePosts || null,
-    },
+    { post: data?.post || null }
   };
 }
 
@@ -69,11 +65,8 @@ export async function getStaticPaths()
   return{
     paths:
       allPosts?.map((post) =>
-        ({
-          params:
-          {
-            slug: post.slug,
-          },
+        ({ params:
+          { slug: post.slug, }
         })
       ) || [],
     fallback: true,

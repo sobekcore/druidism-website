@@ -3,11 +3,15 @@ import Title from "../components/title";
 import Footer from "../components/footer";
 import ImageGallery from "react-image-gallery";
 import ImageList from "../components/image-list";
+import Head from "next/head";
 
 export default function Gallery()
 {
   return(
     <div id="gallery-page">
+      <Head>
+        <title>Druidism - Gallery</title>
+      </Head>
       <div className="background">
         <Navbar />
         <Title />

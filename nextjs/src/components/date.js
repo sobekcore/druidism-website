@@ -4,7 +4,7 @@ export default function Date({ dateString })
 {
   if(!isValid(parseISO(dateString)))
   {
-    return "No date";
+    return "No date.";
   }
 
   const date = parseISO(dateString);
