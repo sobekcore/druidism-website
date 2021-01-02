@@ -21,7 +21,7 @@ export default function PressContent()
         <ul>
           <li>Developer: <br /><a href="https://twitter.com/sobekcore">Sobek</a></li>
           <li>Release date: <br />TBD</li>
-          <li>Platforms: <br />Steam</li>
+          <li>Platforms: <br /><a href="/steam">Steam</a></li>
           <li>Website: <br />druidism.net</li>
           <li>Regular Price: <br />TBD</li>
         </ul>
@@ -29,49 +29,48 @@ export default function PressContent()
       <div id="press-content">
         <Title />
         <h1>Description</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis interdum turpis, non hendrerit felis.
-        Suspendisse vulputate nibh eget lacus dapibus, non commodo enim porttitor. Sed feugiat volutpat elit sit
-        amet mattis. Maecenas posuere pulvinar arcu nec commodo. Praesent pulvinar odio elit, eu euismod purus
-        tincidunt vitae. Suspendisse tincidunt arcu a mi convallis fermentum. Cras tincidunt, diam viverra mollis
-        ultrices, ligula mi tincidunt purus, id pellentesque ipsum erat non tellus.</p>
+        <p>Druidism is a story based RPG made with pixel art. You are fresh baked druid which can choose the way he wants
+          to live. You can choose what your character should be like, choose your aspects, choose your stances, and choose
+          how the plot will go.
+        </p>
         <h1>History</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis interdum turpis, non hendrerit felis.
-        Suspendisse vulputate nibh eget lacus dapibus, non commodo enim porttitor. Sed feugiat volutpat elit sit
-        amet mattis. Maecenas posuere pulvinar arcu nec commodo. Praesent pulvinar odio elit, eu euismod purus
-        tincidunt vitae. Suspendisse tincidunt arcu a mi convallis fermentum. Cras tincidunt, diam viverra mollis
-        ultrices, ligula mi tincidunt purus, id pellentesque ipsum erat non tellus.</p>
+        <p>Work on Druidism started in early 2020, it is currently in developement process by Sobek, the one and only
+          developer working on a game. He had only programming background, and had to taught himself other skill necesary
+          to make the game. It will be completed around 2021-2022, and firstly avaiable on PC.
+        </p>
         <div id="features"></div>
         <h1>Features</h1>
         <ul>
-          <li>Reflective</li>
-          <li>Forecast</li>
-          <li>Collapse</li>
-          <li>String</li>
-          <li>Account</li>
-          <li>Shiny</li>
-          <li>Visitor</li>
-          <li>Justify</li>
+          <li>Shapeshift into many diferent forms and stances.</li>
+          <li>Gather resources in the way you want.</li>
+          <li>Cute hand-made pixel art graphics.</li>
+          <li>Big precrafted world to explore.</li>
+          <li>A lot of dialogue options to choose from.</li>
+          <li>Fight terrifying enemies.</li>
+          <li>Choose the playstyle of your own!</li>
         </ul>
       </div>
 
       <div id="press-more-content">
         <div id="videos"></div>
         <h1>Videos</h1>
-          <div id="press-big-image"><img src="https://unsplash.it/550/325"/></div>
+          {/*<div id="press-big-image"><img src=""/></div>*/}
+          <h3>Soon™</h3>
 
         <hr />
 
         <div id="images"></div>
         <h1>Images</h1>
         <a href="/druidism-images.zip" download>
-          <div className="press-download">download images as .zip (15MB)</div>
+          <div className="press-download">download images as .zip (500KB)</div>
         </a>
         <div id="press-small-image">
-          <a href="https://unsplash.it/1921/1080"><img src="https://unsplash.it/1921/1080"/></a>
-          <a href="https://unsplash.it/1922/1080"><img src="https://unsplash.it/1922/1080"/></a>
-          <img src="https://unsplash.it/1923/1080"/>
-          <img src="https://unsplash.it/1919/1080"/>
-          <img src="https://unsplash.it/1918/1080"/>
+          <a href="images/druidism-1.png"><img src="images/druidism-1.png"/></a>
+          <a href="images/druidism-7.png"><img src="images/druidism-7.png"/></a>
+          <a href="images/druidism-18.png"><img src="images/druidism-18.png"/></a>
+          <a href="images/druidism-8.png"><img src="images/druidism-8.png"/></a>
+          <a href="images/druidism-4.png"><img src="images/druidism-4.png"/></a>
+          <a href="images/druidism-2.png"><img src="images/druidism-2.png"/></a>
         </div>
 
         <hr />
@@ -79,7 +78,7 @@ export default function PressContent()
         <div id="logo"></div>
         <h1>Logo</h1>
         <a href="/druidism-logos.zip" download>
-          <div className="press-download">download logos as .zip (1MB)</div>
+          <div className="press-download">download logos as .zip (4KB)</div>
         </a>
         <div id="press-logo-box">
           <div id="press-icon">

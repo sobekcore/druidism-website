@@ -10,7 +10,7 @@ const postsToSend = [];
 export default function PostPagination()
 {
   const router = useRouter();
-  const postsPerPage = 2;
+  const postsPerPage = 5;
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function PostPagination()
   {
     return(
       <div className="post">
-        <div id="loading">
+        <div className="loading">
           Loading...
         </div>
       </div>

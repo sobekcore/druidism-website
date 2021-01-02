@@ -57,13 +57,14 @@ export function Form ({ _id })
       <input ref={register} type="hidden" name="_id" value={_id}/>
         <label>
           <div id="form-comment">
-            <textarea ref={register({required: true})} name="comment" rows="8" placeholder="Comment..."></textarea>
+            <textarea maxLength={200} ref={register({required: true})}
+            name="comment" rows="8" placeholder="Comment..."></textarea>
           </div>
         </label>
         <div id="form-second-row">
           <label>
             <div id="form-name">
-              <input name="name" ref={register({required: true})} placeholder="Name"/>
+              <input maxLength={16} name="name" ref={register({required: true})} placeholder="Name"/>
             </div>
           </label> <br />
           <label>

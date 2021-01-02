@@ -57,7 +57,7 @@ export async function getPostAndMorePosts(slug, preview)
         {
           ${postFields}
           body,
-          'comments': *[_type == "comment" && references(^._id) && approved == true]
+          'comments': *[_type == "comment" && references(^._id) && approved == true] | order(_createdAt desc)
           {
             _id,
             name,
@@ -91,7 +91,7 @@ export async function getXAmountOfPosts(preview, firstPostID, lastPostID)
         {
           ${postFields}
           body,
-          'comments': *[_type == "comment" && references(^._id) && approved == true]
+          'comments': *[_type == "comment" && references(^._id) && approved == true] | order(_createdAt desc)
           {
             _id,
             name,

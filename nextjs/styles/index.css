@@ -302,7 +302,8 @@ body::-webkit-scrollbar-thumb
 #blog-page #main-title,
 #post-page #main-title,
 #gallery-page #main-title,
-#faq-page #main-title
+#faq-page #main-title,
+#contact-page #main-title
 {
   position: relative;
   transform: translate(-50%, 0%);
@@ -345,11 +346,22 @@ body::-webkit-scrollbar-thumb
 {
   position: relative;
   width: 100vw;
-  height: 750px;
   background: var(--purple-main-color);
+  /* height: 750px; */
+
+  padding-top: 15px;
 }
 
+#trailer-gallery
+{
+  width: 1280px;
+  max-width: 80vw;
+  padding: 5px;
+  margin: auto;
+  border: var(--purple-dark-color) solid 8px;
+}
 
+/*
 #trailer-video img
 {
   position: absolute;
@@ -361,6 +373,7 @@ body::-webkit-scrollbar-thumb
   left: 50%;
   transform: translate(-50%, -50%);
 }
+*/
 
 #section-waves
 {
@@ -421,7 +434,7 @@ body::-webkit-scrollbar-thumb
 /* Blog page */
 .post, .post-preview
 {
-  margin: 0 auto 15px auto;
+  margin: 0 auto 18px auto;
   padding: 3px 28px 10px 28px;
   background-color: var(--blog-bg-color);
   border-radius: 14px;
@@ -461,7 +474,7 @@ body::-webkit-scrollbar-thumb
   filter: drop-shadow(0 0 0.3rem var(--purple-dark-color));
 }
 
-#loading
+.loading
 {
   text-align: center;
   font: bold 58px "Montserrat", sans-serif;
@@ -553,7 +566,7 @@ figure img
   display: flex;
   justify-content: flex-start;
   padding-bottom: 60px;
-  margin-top: -23px;
+  margin-top: -26px;
   max-width: 1110px;
   width: calc(60vw + 60px);
 
@@ -652,6 +665,7 @@ figure img
 #comment-box p
 {
   padding-bottom: 14px;
+  word-wrap: break-word;
 }
 
 #comment-box span
@@ -762,7 +776,7 @@ figure img
   justify-content: center;
   flex-flow: row wrap;
   max-width: 1025px;
-  width: calc(60vw - 10px);
+  width: calc(60vw - 13px);
   padding-top: 6px;
 }
 
@@ -772,6 +786,16 @@ figure img
 {
   padding-top: 25px;
   padding-bottom: 40px;
+  width: 1280px;
+  max-width: 80vw;
+}
+
+#gallery-page .post hr
+{
+  margin-bottom: 27px;
+  border-color: black;
+  background-color: black;
+  height: 1px;
 }
 
 .gallery-title
@@ -822,7 +846,7 @@ figure img
 .image-gallery-play-button
 {
   bottom: 0;
-  padding: 20px;
+  padding: 10px;
 }
 
 .image-gallery-fullscreen-button .image-gallery-svg,
@@ -837,7 +861,7 @@ figure img
   .image-gallery-fullscreen-button,
   .image-gallery-play-button
   {
-    padding: 15px;
+    padding: 8px;
   }
 
   .image-gallery-fullscreen-button .image-gallery-svg,
@@ -853,7 +877,7 @@ figure img
   .image-gallery-fullscreen-button,
   .image-gallery-play-button
   {
-    padding: 10px;
+    padding: 6px;
   }
 
   .image-gallery-fullscreen-button .image-gallery-svg,
@@ -943,11 +967,6 @@ figure img
   position: relative;
   line-height: 0;
   top: 0;
-}
-
-.image-gallery-content .image-gallery-slide .image-gallery-image
-{
-  max-height: calc(100vh - 80px);
 }
 
 .image-gallery-content.left .image-gallery-slide .image-gallery-image, .image-gallery-content.right .image-gallery-slide .image-gallery-image
@@ -1066,7 +1085,7 @@ figure img
 {
   .image-gallery-bullets .image-gallery-bullet
   {
-    margin: 0 3px;
+    margin: -11px 3px;
     padding: 3px;
   }
 }
@@ -1177,8 +1196,9 @@ figure img
 {
   display: inline-block;
   border: 4px solid transparent;
-  transition: border .3s ease-out;
+  transition: border .2s ease-out;
   width: 100px;
+  cursor: pointer;
   background: transparent;
   padding: 0;
 }
@@ -1272,6 +1292,11 @@ figure img
 
 
 /* FAQ page */
+#faq-page .post
+{
+  padding-bottom: 13px;
+}
+
 #faq-page h3
 {
   font: bold 24px "Montserrat", sans-serif;
@@ -1367,6 +1392,16 @@ figure img
   line-height: 1.4;
 }
 
+#press-content ul
+{
+  margin-top: 9px;
+}
+
+#press-content ul li
+{
+  margin-bottom: 5px;
+}
+
 #press-contact li,
 .press-download
 {
@@ -1458,6 +1493,37 @@ figure img
 }
 
 
+/* Steam page */
+#steam-page .post
+{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: calc(var(--navbar-margin) + 70px);
+}
+
+
+/* Contact page */
+#contact-page .post
+{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#contact-mail
+{
+  font: 24px "Montserrat", sans-serif;
+}
+
+#mail
+{
+  color: var(--purple-dark-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 25px;
+  max-width: 20%;
+}
+
+
 /* Media dependencies */
 @media screen and (max-width: 950px) /* Small screens */
 {
@@ -1472,7 +1538,8 @@ figure img
   #blog-page #main-title,
   #post-page #main-title,
   #gallery-page #main-title,
-  #faq-page #main-title
+  #faq-page #main-title,
+  #contact-page #main-title
   {
     margin: calc(var(--navbar-margin) + 40px) 0 40px 0;
   }
@@ -1521,7 +1588,7 @@ figure img
 
   #media-page .post
   {
-    margin-top: 110px;
+    margin-top: calc(var(--navbar-margin) + 50px);
     padding-top: 0px;
     padding-bottom: 15px;
   }
@@ -1558,6 +1625,11 @@ figure img
   #press-logo img
   {
     width: 45vw;
+  }
+
+  #steam-page .post
+  {
+    margin-top: calc(var(--navbar-margin) + 50px);
   }
 }
 
@@ -1620,6 +1692,12 @@ figure img
 
 @media (max-width: 569px) /* Huge phones and small tablets */
 {
+  #date
+  {
+    margin-top: 3px;
+    text-align: left;
+  }
+
   #press-content
   {
     width: calc(60vw + 40px);
@@ -1653,7 +1731,7 @@ figure img
 
 @media screen and (max-width: 426px) /* Regular phones */
 {
-  #loading
+  .loading
   {
     font-size: 36px;
   }
@@ -1674,6 +1752,23 @@ figure img
   #form-submit input
   {
     width: calc(60vw + 19px);
+  }
+
+  #steam-page .post,
+  #contact-page .post
+  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #contact-mail
+  {
+    font-size: 18px;
+  }
+
+  #mail
+  {
+    font-size: 19px;
   }
 }
 
@@ -1701,10 +1796,9 @@ figure img
     padding-top: 60px;
   }
 
-  #date
+  .gallery-title
   {
-    margin-top: 3px;
-    text-align: left;
+    font-size: 36px;
   }
 
   #press-content
@@ -1740,11 +1834,6 @@ figure img
     font-size: 28px;
   }
 
-  .gallery-title
-  {
-    font-size: 38px;
-  }
-
   #press-content
   {
     margin-top: 30px;
@@ -1766,5 +1855,15 @@ figure img
   {
     float: none;
     margin-right: 0;
+  }
+
+  #contact-mail
+  {
+    font-size: 15px;
+  }
+
+  #mail
+  {
+    font-size: 16px;
   }
 }
