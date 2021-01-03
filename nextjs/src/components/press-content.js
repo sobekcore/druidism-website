@@ -22,7 +22,7 @@ export default function PressContent()
           <li>Developer: <br /><a href="https://twitter.com/sobekcore">Sobek</a></li>
           <li>Release date: <br />TBD</li>
           <li>Platforms: <br /><a href="/steam">Steam</a></li>
-          <li>Website: <br />druidism.net</li>
+          <li>Website: <br /><a href="http://druidism.net">druidism.net</a></li>
           <li>Regular Price: <br />TBD</li>
         </ul>
       </div>
@@ -96,7 +96,7 @@ export default function PressContent()
           <ul>
             <li>Inquires: <br /><a href="mailto:sobekcore@gmail.com">sobekcore@gmail.com</a></li>
             <li>Twitter: <br /><a href="https://twitter.com/sobekcore">@SobekCore</a></li>
-            <li>Website: <br />druidism.net</li>
+            <li>Website: <br /><a href="http://druidism.net">druidism.net</a></li>
           </ul>
         </div>
       </div>
