@@ -46,6 +46,7 @@ body::-webkit-scrollbar-thumb
 #navbar
 {
   font: 26px "Montserrat", sans-serif;
+  font-weight: 500;
   background: rgba(97, 61, 150, 0.8);
   text-transform: uppercase;
   width: 100vw;
@@ -1586,7 +1587,7 @@ figure img
   #navbar
   {
     width: 78px;
-    border-radius: 5px;
+    border-radius: 0px 4px 8px 4px;
   }
 
   #navbar-icons #icons-box
