@@ -32,7 +32,7 @@
 #navbar ul li a,
 #navbar ul li a::before,
 #navbar ul li a::after
-{ transition: all .5s; }
+{ transition: .5s ease-in-out; }
 
 #navbar ul li a:hover
 { color: white; }
@@ -117,7 +117,7 @@
 .switch,
 .switch::before,
 .switch::after
-{ transition: all .3s; }
+{ transition: .3s all; }
 
 #hamburger-box,
 #hamburger-box li

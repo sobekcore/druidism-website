@@ -1,8 +1,8 @@
-# Gamedev Website :sunrise_over_mountains:
+# Gamedev Website :fallen_leaf:
 
 It's a example game development website to advertise people about the game and also possibly run a development blog. Blazing fast service with user friendly interface. Running it is also easy for admin due to Sanity interface and ease of adding blog posts.
 
-## How the website is made :fallen_leaf:
+## How the website is made :electric_plug:
 
 The website is made using Next.js and Sanity.io with deployement to Vercel to make it work. Sanity provides ease of fetching data and adding it with their CMS, and Next gives Server Side Rendering (SSR) with eye blinking speed page loading.
 

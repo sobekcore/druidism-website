@@ -4,8 +4,7 @@ import sanityImage from "@sanity/image-url";
 const options =
 {
   dataset: "production",
-  projectId: "8ql5k0im",
-  useCdn: process.env.NODE_ENV === "production",
+  projectId: "8ql5k0im"
 }
 
 const client = sanityClient(options);

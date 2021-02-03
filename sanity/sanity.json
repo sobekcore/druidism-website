@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "8ql5k0im",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "druidism-website"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
