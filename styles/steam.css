@@ -1,0 +1,21 @@
+/* Steam Page Styling */
+#steam-page .post
+{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: calc(var(--navbar-margin) + 70px);
+}
+
+
+/* Media Queries */
+@media (max-width: 849px)
+{
+  #steam-page .post
+  { margin-top: calc(var(--navbar-margin) + 50px); }
+}
+
+@media (max-width: 426px)
+{
+  #steam-page .post
+  { padding-top: 10px; padding-bottom: 10px; }
+}

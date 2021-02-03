@@ -1,0 +1,60 @@
+/* Pagination Styling */
+#pagination
+{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 60px;
+  margin-top: -23px;
+  max-width: 1110px;
+  width: calc(60vw + 60px);
+
+  /* Center pagination box */
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#pagination ul
+{
+  list-style: none;
+  margin-left: -45px;
+}
+
+#pagination ul li
+{
+  display: inline-block;
+  margin: 3px 4px 3px 4px;
+  text-align: left;
+}
+
+#pagination ul li button
+{
+  width: 48px;
+  height: 40px;
+  border-radius: 10px;
+  border: 4px solid var(--purple-dark-color);
+  background-color: var(--blog-bg-color);
+  font: 20px "Varela Round", sans-serif;
+}
+
+#pagination ul li button,
+#pagination ul li button::before,
+#pagination ul li button::after
+{
+  transition: all .2s;
+}
+
+#pagination ul li button:hover
+{
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.4rem black);
+  background-color: white;
+}
+
+
+/* Media Queries */
+@media (max-width: 849px)
+{
+  #pagination
+  { padding-bottom: 30px; }
+}

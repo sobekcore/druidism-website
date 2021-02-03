@@ -1,0 +1,47 @@
+/* CSS Global Settings */
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body
+{
+  padding: 0px;
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-anchor: none;
+  text-rendering: optimizeLegibility;
+  image-rendering: pixelated;
+
+  --navbar-margin: 60px;
+  --purple-main-color: #613D96;
+  --purple-dark-color: #401D66;
+  --light-pink-color: #D6C5F8;
+  --blog-bg-color: #CDCBD4;
+  --pink-gray-color: #B0ACB5;
+}
+
+.background
+{
+  position: absolute;
+  background:
+    url(../public/background.png) no-repeat fixed bottom center / cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+body::-webkit-scrollbar
+{ width: 14px; }
+
+body::-webkit-scrollbar-track
+{ background: var(--light-pink-color); }
+
+body::-webkit-scrollbar-thumb
+{ background: var(--purple-dark-color); }
+
+::selection
+{
+  background-color: var(--purple-main-color);
+  color: var(--blog-bg-color);
+}

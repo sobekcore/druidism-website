@@ -1,0 +1,19 @@
+/* FAQ Page Styling*/
+#faq-page .post
+{ padding-bottom: 13px; }
+
+#faq-page h2
+{
+  font: bold 24px "Varela Round", sans-serif;
+  margin: 30px 0 0 0;
+}
+
+#faq-page h2:first-child
+{ margin-top: 20px; }
+
+#faq-page p
+{
+  font: 17px "Open Sans", sans-serif;
+  line-height: 1.4;
+  margin: 8px 0 12px 0;
+}

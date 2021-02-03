@@ -1,0 +1,35 @@
+/* Contact Page Styling */
+#contact-page .post
+{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#contact-mail
+{ font: 24px "Varela Round", sans-serif; }
+
+#mail
+{
+  color: var(--purple-dark-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 25px;
+  max-width: 20%;
+}
+
+
+/* Media Queries */
+@media (max-width: 426px)
+{
+  #contact-page .post
+  { padding-top: 10px; padding-bottom: 10px; }
+
+  #contact-mail { font-size: 18px;}
+  #mail { font-size: 19px;}
+}
+
+@media (max-width: 299px)
+{
+  #contact-mail { font-size: 15px; }
+  #mail { font-size: 16px; }
+}

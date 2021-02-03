@@ -1,0 +1,162 @@
+/* Comments */
+.comments-title
+{
+  font: bold 24px "Varela Round", sans-serif;
+  padding-top: 8px;
+}
+
+#comment-box
+{
+  margin: 0px 15px -6px -25px;
+  font: 16px "Roboto", sans-serif;
+  background-color: var(--pink-gray-color);
+  border-radius: 7px;
+  padding: 14px 10px 0px 10px;
+  max-width: 990px;
+}
+
+#comment-box p
+{
+  padding-bottom: 14px;
+  word-wrap: break-word;
+}
+
+#comment-box span
+{ font-weight: 600; }
+
+#comment-box:last-child
+{ margin-bottom: 25px; }
+
+#date
+{
+  text-align: right;
+  margin: -17px 0 0 0;
+}
+
+.comment-submitting
+{
+  font: bold 17px "Roboto", sans-serif;
+  margin-left: 17px; margin-bottom: 25px;
+}
+
+
+/* Comment Form */
+#form
+{ margin: 30px 0 20px 0; }
+
+#form-name input,
+#form-email input,
+#form-submit input
+{
+  font: 16px "Roboto", sans-serif;
+  margin: 4px 0 4px 0;
+  border-radius: 5px;
+  border: 3px solid var(--purple-dark-color);
+  background: white;
+  padding: 5px 7px 5px 7px;
+  max-width: 313px; min-width: 113px;
+  width: calc(20vw - 33px);
+}
+
+#form-submit input,
+#form-submit input::before,
+#form-submit input::after
+{
+  transition: all .5s;
+  width: calc(20vw - 34px);
+  min-width: 133px;
+}
+
+#form-name input:focus,
+#form-email input:focus,
+#form-submit input:focus,
+#form-comment textarea:focus
+{ border: 3px solid white; }
+
+#form-name,
+#form-email,
+#form-comment
+{
+  font: bold 16px "Roboto", sans-serif;
+  margin: 0px 0px 0px 15px;
+}
+
+#form-comment textarea
+{
+  resize: none;
+  border-radius: 5px;
+  padding: 5px 7px 5px 7px;
+  border: 3px solid var(--purple-dark-color);
+  background: white;
+  max-width: 1010px;
+  width: calc(60vw - 30px);
+  height: 76px;
+  font: 17px "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+#form-submit
+{ margin-left: 15px; }
+
+#form-submit input
+{
+  font: 15px "Roboto", sans-serif;
+  color: var(--purple-dark-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#form-submit input:hover
+{ background-color: var(--light-pink-color); }
+
+#form-second-row
+{
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: 1025px;
+  width: calc(60vw - 13px);
+  padding-top: 6px;
+}
+
+
+/* Media Queries */
+@media (max-width: 849px)
+{
+  #form-second-row
+  {
+    width: calc(60vw + 40px);
+    margin-left: -2px;
+  }
+
+  #form-name input,
+  #form-email input,
+  #form-submit input
+  { width: calc(20vw - 18px); }
+
+  #form-comment textarea
+  { width: calc(60vw + 20px); }
+}
+
+@media (max-width: 569px)
+{
+  #date
+  {
+    margin-top: 3px;
+    text-align: left;
+  }
+
+  #form-second-row
+  { margin-left: 0; }
+
+  #form-name input,
+  #form-email input,
+  #form-submit input
+  {
+    width: calc(60vw);
+    margin-left: -5px;
+  }
+
+  #form-submit input
+  { width: calc(60vw + 19px); }
+}

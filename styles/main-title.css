@@ -1,0 +1,38 @@
+/* Main Title Styling */
+#main-title
+{
+  margin-top: calc(36vh + var(--navbar-margin));
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80vw;
+  max-width: 736px;
+}
+
+#main-title img
+{ width: 100%; height: auto; }
+
+#blog-page #main-title,
+#post-page #main-title,
+#gallery-page #main-title,
+#faq-page #main-title,
+#contact-page #main-title
+{
+  position: relative;
+  transform: translate(-50%, 0%);
+  padding: 0;
+  margin: calc(var(--navbar-margin) + 60px) 0 60px 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 849px)
+{
+  #blog-page #main-title,
+  #post-page #main-title,
+  #gallery-page #main-title,
+  #faq-page #main-title,
+  #contact-page #main-title
+  { margin: calc(var(--navbar-margin) + 40px) 0 40px 0; }
+}

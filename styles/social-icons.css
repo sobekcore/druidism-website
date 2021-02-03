@@ -1,0 +1,36 @@
+/* Social Icons Styling */
+#icons-box
+{
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  margin-top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#icons-box .icon
+{
+  width: 40px;
+  margin: 0 10px 0 10px;
+}
+
+#icons-box ul
+{
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+#icons-box ul li
+{ display: inline; }
+
+#icons-box ul li a,
+#icons-box ul li a::before,
+#icons-box ul li a::after
+{
+  display: inline-flex;
+  transition: all .3s;
+}
+
+#icons-box ul li a:hover
+{ filter: brightness(1.8) drop-shadow(0 0 0.75rem black); }
