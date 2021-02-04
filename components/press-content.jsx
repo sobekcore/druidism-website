@@ -5,8 +5,8 @@ export default function PressContent()
 {
   return(
   <>
-    <div className="post">
-      <div id="press-nav">
+    <article className="post">
+      <nav id="press-nav">
         <h2>Druidism</h2>
         <ul>
           <li><Link href="/media/#features">Features</Link></li>
@@ -15,8 +15,8 @@ export default function PressContent()
           <li><Link href="/media/#logo">Logo</Link></li>
           <li><Link href="/media/#contact">Contact</Link></li>
         </ul>
-      </div>
-      <div id="press-factsheet">
+      </nav>
+      <section id="press-factsheet">
         <h2>Factsheet</h2>
         <ul>
           <li>Developer: <br /><a href="https://twitter.com/sobekcore">Sobek</a></li>
@@ -24,8 +24,8 @@ export default function PressContent()
           <li>Platforms: <br /><a href="/steam">Steam</a></li>
           <li>Regular Price: <br />TBD</li>
         </ul>
-      </div>
-      <div id="press-content">
+      </section>
+      <section id="press-content">
         <Title />
         <h2>Description</h2>
         <p>Druidism is a story based RPG made with pixel art. You are fresh baked druid which can choose the way he wants
@@ -48,9 +48,9 @@ export default function PressContent()
           <li>Fight terrifying enemies.</li>
           <li>Choose the playstyle of your own!</li>
         </ul>
-      </div>
+      </section>
 
-      <div id="press-more-content">
+      <section id="press-more-content">
         <div id="videos"></div>
         <h2>Videos</h2>
           <h3>Soon™</h3>
@@ -97,8 +97,8 @@ export default function PressContent()
             <li>Twitter: <br /><a href="https://twitter.com/sobekcore">@SobekCore</a></li>
           </ul>
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
   </>
   );
 }

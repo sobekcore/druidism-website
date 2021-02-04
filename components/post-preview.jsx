@@ -12,7 +12,7 @@ export default function PostPreview({
 })
 {
   return(
-    <div className="post-preview">
+    <article className="post-preview">
       <h2>
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
           <a>{title}</a>
@@ -32,6 +32,6 @@ export default function PostPreview({
           <a>Show more...</a>
         </Link>
       </div>
-    </div>
+    </article>
   );
 }

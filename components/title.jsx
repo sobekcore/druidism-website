@@ -1,8 +1,8 @@
 export default function Title()
 {
   return(
-    <div id="main-title">
+    <header id="main-title">
       <img src="/main-logo.png"/>
-    </div>
+    </header>
   );
 }

@@ -1,5 +1,5 @@
 /* Footer Styling */
-#footer
+footer
 {
   position: sticky;
   font: 20px "Varela Round", sans-serif;
@@ -10,20 +10,20 @@
   top: 100vh;
 }
 
-#footer #created-by
+footer #created-by
 {
   padding: 21px 25px 19px 25px;
   text-align: center;
 }
 
-#footer #created-by a
+footer #created-by a
 {
   text-decoration: none;
   color: white;
   font-size: 21px;
 }
 
-#footer hr
+footer hr
 {
   border-color: var(--light-pink-color);
   background-color: var(--light-pink-color);

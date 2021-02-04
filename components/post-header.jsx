@@ -7,12 +7,12 @@ export default function PostHeader({ title, date, author, categories })
   return(
     <>
       <PostTitle>{title}</PostTitle>
-      <div>
+      <header>
         <div className="published">
           <Published name={author.name} picture={author.picture} dateString={date} />
         </div>
         <PostCategories categoryList={categories}/>
-      </div>
+      </header>
     </>
   );
 }
